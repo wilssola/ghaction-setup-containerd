@@ -1,5 +1,5 @@
 # https://help.github.com/en/articles/metadata-syntax-for-github-actions
-name: 'Setup containerd'
+name: 'Setup containerd (truly open source)'
 description: 'GitHub Action to set up containerd'
 author: 'step-security'
 branding:
