@@ -8,11 +8,9 @@ import * as containerd from './containerd';
 import * as stateHelper from './state-helper';
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
-import axios, {isAxiosError} from 'axios';
 
 async function run(): Promise<void> {
   try {
-    await validateSubscription();
     if (os.platform() !== 'linux') {
       core.setFailed('Only supported on linux platform');
       return;
@@ -85,8 +83,4 @@ if (!stateHelper.IsPost) {
   run();
 } else {
   cleanup();
-}
-
-async function validateSubscription(): Promise<void> {
- return;
 }
